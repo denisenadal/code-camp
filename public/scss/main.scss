@@ -1,0 +1,48 @@
+// 1. Import the initial variables
+@import "node_modules/bulma/sass/utilities/initial-variables";
+@import "node_modules/bulma/sass/utilities/functions";
+
+// 2. Set your own initial variables
+fieldset{border: none;}
+$section-padding: 3rem 0;
+
+.container {
+	width: calc(90% - 2rem) ;
+ 	max-width: calc(90% - 2rem) ;
+ }
+ $gap: 100;
+ $desktop:992px;
+ $widescreen:1200px;
+ $fullhd:1400px;
+
+// 6. Import the rest of Bulma
+@import "node_modules/bulma/bulma";
+
+//style overrides
+section.hero{
+	background-image:url('../imgs/doc-tilt.svg'),  linear-gradient(135deg, #05abe0 0%,#76f2be 100%);
+	background-repeat: no-repeat, no-repeat;
+	background-position: 133% center, right center;
+	background-size: auto 125%, auto;
+}
+
+.hero-body{
+	padding-left: 0;
+	padding-right: 0;
+}
+.hero-body form{
+	max-width: 500px;
+	display: block;
+}
+.level{
+	padding:1rem 0;
+}
+
+.ref-set{
+	padding-bottom: 2rem;
+}
+
+//js styles init
+#main-menu-drop,#ed0, #job0, #ref0{
+	display: none;
+}

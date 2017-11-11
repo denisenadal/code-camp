@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Super Easy Resume Builder</title>
+	 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/main.css" type="text/css">
+</head>
+<body>
+<header>
+	<nav class="level container" role="navigation" aria-label="main navigation">
+		<a href="" class="level-left">Resumaker</a>
+		<div class="level-right has-dropdown">
+			<i id="main-menu" class="fa fa-bars"></i>
+			<div id="main-menu-drop" class="navbar-dropdown">
+				<a href="" class="navbar-item">Home</a>
+				<a href="" class="navbar-item">Profile</a>
+				<a href="" class="navbar-item">New Resume</a>
+				<a href="" class="navbar-item">Logout</a>
+			</div>
+		</div>
+	</nav>
+</header>
+<main class="container">
+	<h1 class="title is-h1">Your Profile</h1>
+	<form class="content">
+		<section id="user-contact" class="section">
+			<h2>Contact Info</h2>
+			<hr>
+			<fieldset class="field columns">
+				<div class="control is-half column">
+					<label for="user-fname" class="label">First Name</label>
+					<input type="text" id="user-fname" name="user-fname-field" placeholder="First Name" class="input">
+				</div>
+				<div class="control is-half column">
+					<label for="user-lname" class="label">Last Name</label>
+					<input type="text" id="user-lname" name="user-lname-field" placeholder="Last Name" class="input">
+				</div>
+			</fieldset>
+			<fieldset class="field columns">
+				<div class="control column is-third">
+					<label for="user-street" class="label">Stree Address</label>
+					<input type="text" class="input" id="user-address" name="user-address-field" placeholder="123 Main Street, Apt #5">
+				</div>
+				<div class="control column is-third">
+					<label for="user-city" class="label">City</label>
+					<input type="text" id="user-city" name="user-city-field" placeholder="Smalltown" class="input">
+				</div>
+				<div class="control column">
+					<label for="user-state" class="label">State</label>
+					<div class="select">
+						<select id="user-state" name="user-state-field">
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District Of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+					</div>
+				</div>
+				<div class="control column">
+					<label for="user-zip" class="label">Zip</label>
+					<input type="text" id="user-zip" name="user-zip-field" placeholder="90210" class="input">
+				</div>
+			</fieldset>
+			<fieldset class="field columns">
+				<div class="control column is-third">
+					<label for="user-hphone" class="label">Home Phone</label>
+					<input type="tel" class="input" id="user-hphone" name="user-hphone-field" placeholder="555-555-5555">
+				</div>
+				<div class="control column is-third">
+					<label for="user-cphone" class="label">Cell Phone</label>
+					<input type="tel" class="input" id="user-cphone" name="user-cphone-field" placeholder="555-555-5555">
+				</div>
+				<div class="control column is-third">
+					<label for="user-email" class="label">Email</label>
+					<input type="email" id="user-email" name="user-email-field" placeholder="someone@email.com" class="input">
+				</div>
+			</fieldset>
+		</section>
+		<section id="user-skills" class="section">
+			<h2>Skills</h2>
+			<hr>
+			<fieldset class="field">
+				<label for="skills" class="label">Relevant Job Skills</label>
+				<p class="help">Enter one skill per line (press "Enter" to start a new line)</p>
+				<textarea id="skills" name="skills-field" class="textarea" placeholder="one skill per line"></textarea>
+			</fieldset>
+		</section>
+		<section id="user-education" class="section">
+			<h2>Education</h2>
+			<hr>
+			<div id="ed0" class="ed-set ref-set">
+				<h3>School</h3>
+				<fieldset class="field columns">
+					<div class="control column">
+						<p class="label block">School Type</p>
+						<label for="ed0-type" class="radio">
+						<input type="radio" id="ed0-type-hs" name="ed0-type" > High School</label>
+						<label for="ed0-type" class="radio">
+						<input type="radio" id="ed0-type-college" name="ed0-type" > College</label>
+						<label for="ed0-type" class="radio">
+						<input type="radio" id="ed0-type-other" name="ed0-type" > Other </label>
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column is-half">
+						<label for="ed0-name" class="label">School Name</label>
+						<input type="text" id="ed0-name" name="ed0-name-field" placeholder="Smalltown University" class="input">
+					</div>
+					<div class="control column is-half">
+						<label for="ed0-degree" class="label">Degree/Program</label>
+						<input type="text" id="ed0-degree" name="ed0-degree-field" placeholder="M.S. Computer Science" class="input">
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column is-half">
+						<label for="ed0-city" class="label">City</label>
+						<input type="text" id="ed0-city" name="ed0-city-field" placeholder="Smalltown" class="input">
+					</div>
+					<div class="control column is-fourth">
+						<label for="ed0-state" class="label">State</label>
+						<input type="text" id="ed0-state" name="ed0-state-field" placeholder="CA" class="input">
+					</div>
+					<div class="control column is-fourth">
+						<label for="ed0-country" class="label">Country</label>
+						<input type="text" id="ed0-country" name="ed0-country-field" placeholder="USA" class="input">
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column is-third">
+						<label for="ed0-start" class="label">Start Date</label>
+						<input type="date" class="input" id="ed0-start" name="ed0-start-field">
+					</div>
+					<div class="control column is-third">
+						<label for="ed0-end" class="label">End Date</label>
+						<input type="date" class="input" id="ed0-end" name="ed0-end-field">
+						<p class="help">Graduation date or date of last attendance</p>
+					</div>
+					<div class="control column is-third">
+						<p class="label block">Graduated?</p>
+						<label for="ed0-grad-1" class="radio">
+						<input type="radio" id="ed0-grad-1" name="ed0-grad-1-field" > Yes</label>
+						<label for="ed0-grad-0" class="radio">
+						<input type="radio" id="ed0-grad-0" name="ed0-grad-0-field" > No </label>​​​​​​​​​​​​​​​​​​​​​​​​​
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column">
+						<label for="ed0-achievements" class="label">Achievements/Highlights</label>
+						<p class="help">Enter one achievement, award, or highlight per line (press "Enter" to start a new line)</p>
+						<textarea id="ed0-achievements" name="ed0-achievements-field" class="textarea" placeholder="Dean's List every semester"></textarea>
+					</div>
+				</fieldset>
+			</div>
+			<div id="add-ed-wrap" class="field columns">
+				<div class="control column">
+					<div id="add-ed" class="add-repeater button is-pulled-right"> <i class="fa fa-plus" aria-label=""> Add School</i></div>
+				</div>
+			</div>
+		</section>
+		<section id="user-jobs" class="section">
+			<h2>Work History</h2>
+			<hr>
+			<div id="job0" class="job-set ref-set">
+				<h3>Job</h3>
+				<fieldset class="field columns">
+					<div class="control column is-half">
+						<label for="job0-name" class="label">Employer Name</label>
+						<input type="text" id="job0-name" name="job0-name-field" placeholder="Smalltown Startup" class="input">
+					</div>
+					<div class="control column is-half">
+						<label for="job0-industry" class="label">Industry</label>
+						<input type="text" id="job0-industry" name="job0-industry-field" placeholder="Techonology" class="input">
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column is-half">
+						<label for="job0-city" class="label">City</label>
+						<input type="text" id="job0-city" name="job0-city-field" placeholder="Smalltown" class="input">
+					</div>
+					<div class="control column is-fourth">
+						<label for="job0-state" class="label">State</label>
+						<input type="text" id="job0-state" name="job0-state-field" placeholder="CA" class="input">
+					</div>
+					<div class="control column is-fourth">
+						<label for="job0-country" class="label">Country</label>
+						<input type="text" id="job0-country" name="job0-country-field" placeholder="USA" class="input">
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column is-third">
+						<label for="job0-start" class="label">Start Date</label>
+						<input type="date" class="input" id="job0-start" name="job0-start-field">
+					</div>
+					<div class="control column is-third">
+						<label for="job0-end" class="label">End Date</label>
+						<input type="date" class="input" id="job0-end" name="job0-end-field">
+					</div>
+					<div class="control column is-third">
+						<p class="label block">Still Work Here?</p>
+						<label for="job0-current-1" class="radio">
+						<input type="radio" id="job0-current-1" name="job0-current-1-field" > Yes</label>
+						<label for="job0-current-0" class="radio">
+						<input type="radio" id="job0-current-0" name="job0-current-0-field" > No </label>​​​​​​​​​​​​​​​​​​​​​​​​​
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column">
+						<label for="job0-duties" class="label">Duties/Responsibilities</label>
+						<p class="help">Describe your job in a few, descriptive sentences.</p>
+						<textarea id="job0-duties" name="job0-duties-field" class="textarea" placeholder="Coding hot shot in various languages."></textarea>
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column">
+						<label for="job0-achievements" class="label">Achievements/Highlights</label>
+						<p class="help">Enter one achievement, award, or highlight per line (press "Enter" to start a new line)</p>
+						<textarea id="job0-achievements" name="job0-achievements-field" class="textarea" placeholder="Launched Best-selling Android App"></textarea>
+					</div>
+				</fieldset>
+			</div>
+			<div id="add-job-wrap" class="field columns">
+				<div class="control column">
+					<div id="add-job" class="add-repeater button is-pulled-right"> <i class="fa fa-plus" aria-label=""> Add Job</i></div>
+				</div>
+			</div>
+		</section>
+		<section id="user-extras" class="section">
+			<h2>Additional Skills</h2>
+			<hr>
+			<fieldset class="field">
+				<label for="extras" class="label">Other Skills you Have</label>
+				<p class="help">Enter one skill per line (press "Enter" to start a new line)</p>
+				<textarea id="extras" name="extras-field" class="textarea" placeholder="one skill per line"></textarea>
+			</fieldset>
+		</section>
+		<section id="user-references" class="section">
+			<h2>References</h2>
+			<hr>
+			<div id="ref0" class="ref-set ref-set">
+				<h3>Reference</h3>
+				<fieldset class="field columns">
+					<div class="control column">
+						<label for="ref0-name" class="label">Name</label>
+						<input type="text" id="ref0-name" name="ref0-name-field" placeholder="Awesome Boss" class="input">
+					</div>
+					<div class="control column">
+						<label for="ref0-title" class="label">Title</label>
+						<input type="text" id="ref0-title" name="ref0-title-field" placeholder="CEO" class="input">
+					</div>
+					<div class="control column">
+						<label for="ref0-company" class="label">Company</label>
+						<input type="text" id="ref0-company" name="ref0-company-field" placeholder="Smalltown Startup" class="input">
+					</div>
+				</fieldset>
+				<fieldset class="field columns">
+					<div class="control column">
+						<label for="ref0-phone" class="label">Home Phone</label>
+						<input type="tel" class="input" id="ref0-phone" name="ref0-phone-field" placeholder="555-555-5555">
+					</div>
+					<div class="control column">
+						<label for="ref0-email" class="label">Email</label>
+						<input type="email" id="ref0-email" name="ref0-email-field" placeholder="someone@email.com" class="input">
+					</div>
+				</fieldset>
+			</div>
+			<div id="add-ref-wrap" class="field columns">
+				<div class="control column">
+					<div id="add-ref" class="add-repeater button is-pulled-right"> <i class="fa fa-plus" aria-label=""> Add Reference</i></div>
+				</div>
+			</div>
+		</section>
+	</form>
+</main>
+<footer>
+	<div class="container">
+		<small class="is-pulled-right">copyright 2017.</small>
+	</div>
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="../js/ui.js"></script>
+	</footer>
+</body>
+</html>
