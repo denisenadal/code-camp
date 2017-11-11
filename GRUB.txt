@@ -20,11 +20,21 @@ keys?
     ?filter=$FIELD,eq,$FIELD-RECORD
     ?filter=$email,eq,mtyler@dovahcorp.com&transform=1
 
-
 URL
     camp.dovahcorp.com
 
 TEST INPUTS
+    users
+        uid:
+        u_fname:geof
+        u_lname:richards
+        phone:39290409
+        address:street st
+        city:town
+        state:st
+        zip:32413
+        email:mailman
+
     Education
         eid:e1
         school_type:univercity
