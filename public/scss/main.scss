@@ -34,6 +34,10 @@ div.is-danger{background:$danger;}
 	height: 0;
 }
 div.is-light{background: $light;}
+
+body>header {
+    box-shadow: 0px 0px 2px 3px rgba(0,0,0,.2);
+}
 //style overrides
 section.hero{
 	background-image:url('../imgs/doc-tilt.svg'),  linear-gradient(135deg, #05abe0 0%,#76f2be 100%);
