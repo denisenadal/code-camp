@@ -9,3 +9,11 @@ Description:
  
  Table Number:
   13
+
+Dependencies:
+  * node.js
+  * angular.js
+  * jquery
+  * SASS
+  * Bulma CSS
+  
