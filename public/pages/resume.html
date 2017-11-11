@@ -7,6 +7,8 @@
 	<title>Super Easy Resume Builder</title>
 	 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
 	<link rel="stylesheet" href="../css/main.css" type="text/css">
+	<link rel="stylesheet" href="../css/resume-thick-stripe.css" type="text/css">
+
 </head>
 <body>
 <header>
@@ -23,30 +25,55 @@
 		</div>
 	</nav>
 </header>
-<main class="container">
-	<div class="columns">
-		<aside class="menu column is-one-quarter">
-			<img src="../imgs/user.svg" class="is-square user-avatar" alt="user avatar; icon made by freepik @ flaticon.com">
-			<p class="menu-label">Welcome {{user.name}}</p>
-			<ul class="menu-list">
-				<li><a href="{{/user/uid}}" class="is-primary" >View/Edit your Profile</a></li>
-			</ul>
-		</aside>
-		<section id="dash-wrap" class="column is-three-quarters ">
-			<div id="resume-box" class="box is-light">
-				<h2 class="is-h2 title">Your Resumes</h2>
-				<ul id="current-resumes" class="none column">
-					<li clas="none">You have no resumes yet!</li>
-				</ul>
-				<div class="level field is-grouped is-grouped-centered">
-					<div class="control">
-						<div class="button is-primary" id="add-resume"><i class="fa fa-plus" aria-label=""> Create New Resume</i></div>
-					</div>
+<main id="print-res" class="container content">
+	<div class="stripe">
+		<div class="initials">{{user.fname[0]+user.lname[0]}}</div>
+	</div>
+	<div class="main">
+		<header>
+			<h1>{{user.fname}} {{user.lname}}</h1>
+			<div class="contact">
+				{{user.street}}, {{user.city}}, {{user.state}}, {{user.zip}} | home: {{user.hphone}} | cell: {{user.cphone}} | {{user.email}}
+			</div>
+		</header>
+		<section class="education">
+			<h2>Education</h2>
+			<div class="school entry">
+				<div class="left">
+					<h3>{{school.name}}</h3>
+					<p class="school-facts">{{school.city}}, {{school.state}}, {{school.country}}</p>
+				</div>
+				<div class="right">
+					<h4 class="degree-facts">{{school.degree}}</h4>
+					<p class="dates">{{school.start}} - {{school.end}}</p>
+				</div>
+				<div class="full">
+					<ul>{{school.achievements}}</p>
 				</div>
 			</div>
 		</section>
+		<section class="work">
+			<h2>Employment History</h2>
+			<div class="job entry">
+				<div class="left">
+					<h3>{{job.company.name}}</h3>
+					<p class="school-facts">{{job.company.city}}, {{job.company.state}}, {{job.company.country}}</p>
+				</div>
+				<div class="right">
+					<h4 class="degree-facts">{{job.role.title}}</h4>
+					<p class="dates">{{job.role.start}} - {{job.role.end}}</p>
+				</div>
+				<div class="full">
+					<p class="duties">{{job.role.duties}}</p>
+					<ul>{{job.role.achievements}}</p>
+				</div>
+			</div>
+		</section>
+		<section class="skills">
+			<h2>Skills</h2>
+			<ul>{{skills}}</ul>
+		</section>
 	</div>
-
 </main>
 <footer>
 	<div class="container clearfix">

@@ -17,7 +17,15 @@ $section-padding: 3rem 0;
 
 // 6. Import the rest of Bulma
 @import "node_modules/bulma/bulma";
+.padding{padding:2rem;}
 
+.clearfix::after{
+	content:'';
+	display: table;
+	clear: both;
+	height: 0;
+}
+div.is-light{background: $light;}
 //style overrides
 section.hero{
 	background-image:url('../imgs/doc-tilt.svg'),  linear-gradient(135deg, #05abe0 0%,#76f2be 100%);
@@ -41,7 +49,21 @@ section.hero{
 .ref-set{
 	padding-bottom: 2rem;
 }
+img.user-avatar{
+	padding:2rem 20%;
+}
 
+#dash-wrap{
+	min-height: calc(100vh - 2rem);
+}
+#current-resumes{
+	min-height: 200px;
+	background: $light;
+}
+#color-picker .level-item{
+	margin: 0 .5rem;
+}
+footer{padding-top: 1rem;}
 //js styles init
 #main-menu-drop,#ed0, #job0, #ref0{
 	display: none;
