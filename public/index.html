@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  ng-app="resumaker" ng-class="appClass">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
 <body>
 <header>
 	<nav class="level container" role="navigation" aria-label="main navigation">
-		<a href="" class="level-left">Resumaker</a>
+		<a href="#/" class="level-left">Resumaker</a>
 		<div class="level-right has-dropdown">
 			<i id="main-menu" class="fa fa-bars"></i>
 			<div id="main-menu-drop" class="navbar-dropdown">
@@ -23,64 +23,23 @@
 		</div>
 	</nav>
 </header>
-<main>
-	<section class="hero is-primary section">
-		<div class="hero-body container">
-			<h1 class="title">Resumaker</h1>
-			<p class="subtitle">Makes Resumes Easy!</p>
-			<form action="">
-				<fieldset class="field columns">
-					<p class="control column is-half">
-						<input type="email" id="email-field" name="email" placeholder="email" class=" input">
-					</p>
-					<p class="control column is-half">
-						<input type="password" minlength=8 placeholder="password" class="input">
-					</p>
-				</fieldset>
-				<fieldset class="field is-grouped is-grouped-right">
-					<p class="control">
-						<label for="auth-signin" class="radio">
-							<input type="radio" id="auth-signin" name="auth-action" value="signin" > Sign Up</label>
-					</p>
-					<p class="control">
-						<label for="auth-login" class="radio">
-							<input type="radio" id="auth-login" name="auth-action" value="alogin"> Log In</label>
-					</p>
-					<p class="control">
-						<input type="submit" value="submit" class="button">
-					</p>
-				</fieldset>
-			</form>
-		</div>
-	</section>
-	<section class="section container">
-		<div class="columns content">
-			<div class="column is-two-thirds">
-				<h2>How it Works</h2>
-				<p>Resumaker makes building resumes easy; you can have a professional resume ready in minutes in 4 simple steps:<p>
-				<ol>
-					<li>Sign up for a free account</li>
-					<li>Fill out your profile</li>
-					<li>Choose a template</li>
-					<li>Print your resume!</li>
-				</ol>
-			</div>
-			<div class="column is-one-third">
-				<figure>
-					<img src="imgs/curriculum2.svg" alt="flat icon of a customized resume">
-					<figcaption>
-						<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-					</figcaption>
-				</figure>
-			</div>
-		</div>
-	</section>
+<main class="content" ng-view>
+	<!-- place for routed views-->
 </main>
 <footer>
 	<div class="container clearfix">
 		<small class="is-pulled-right">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>; Resumaker made with love by Denise, Matt & Noah; copyright 2017.</small>
 	</div>
 	<script src="http://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-cookies.min.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/restservice.js"></script>
+	<script src="js/dashController.js"></script>
+	<script src="js/profileController.js"></script>
+	<script src="js/resumeController.js"></script>
 </footer>
 </body>
 </html>

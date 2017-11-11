@@ -1,10 +1,10 @@
-@media all {
+@media print {
 	body>header, body>footer{display: none;}
 }
 #print-res header{
 	text-align: center;
 }
-main#print-res{
+#print-res{
 	width: 100%;
 	min-height: 100vh;
 	padding: 0;

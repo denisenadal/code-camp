@@ -1,54 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Super Easy Resume Builder</title>
-	 <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
-	<link rel="stylesheet" href="../css/main.css" type="text/css">
-	<link rel="stylesheet" href="../css/resume-thick-stripe.css" type="text/css">
+<section id="builder"  class="container content">
+	<h1 class="is-h1 title">Create a Resume</h1>
+	<h2 class="is-h2">Choose A Color</h2>
+	<div id="color-picker" class="level ">
+		<div class="button level-item is-primary">aqua</div>
+		<div class="button level-item is-link">cerulean</div>
+		<div class="button level-item is-info">sky</div>
+		<div class="button level-item is-success">lime</div>
+		<div class="button level-item is-warning">dandelion</div>
+		<div class="button level-item is-danger">tomato</div>
+	</div>
+	<h2 class="is-h2">Choose a template:</h2>
+	<div class="columns is-light padding">
+		<a class="column res-template"><img src="imgs/resume-serif.png" alt="resume preview"></a>
+		<a class="column res-template"><img src="imgs/resume-icons.png" alt="resume preview"></a>
+		<a class="column res-template"><img src="imgs/resume-thin-stripe.png" alt="resume preview"></a>
+		<a class="column res-template"><img src="imgs/resume-thick-stripe.png" alt="resume preview"></a>
 
-</head>
-<body>
-<header>
-	<nav class="level container" role="navigation" aria-label="main navigation">
-		<a href="" class="level-left">Resumaker</a>
-		<div class="level-right has-dropdown">
-			<i id="main-menu" class="fa fa-bars"></i>
-			<div id="main-menu-drop" class="navbar-dropdown">
-				<a href="" class="navbar-item">Home</a>
-				<a href="" class="navbar-item">Profile</a>
-				<a href="" class="navbar-item">New Resume</a>
-				<a href="" class="navbar-item">Logout</a>
-			</div>
-		</div>
-	</nav>
-</header>
-<main id="print-res" class="container content">
-	<div class="stripe">
-		<div class="initials">{{user.fname[0]+user.lname[0]}}</div>
+	</div>
+</section>
+<section id="print-res" class="container content">
+	<link rel="stylesheet" href="css/resume-thick-stripe.css">
+	<div class="stripe"  ng-model="currentUser">
+		<div class="initials">{{currentUser.u_fname[0]+currentUser.u_lname[0]}}</div>
 	</div>
 	<div class="main">
-		<header>
-			<h1>{{user.fname}} {{user.lname}}</h1>
+		<header ng-model="currentUser">
+			<h1>{{currentUser.u_fname}} {{currentUser.u_lname}}</h1>
 			<div class="contact">
-				{{user.street}}, {{user.city}}, {{user.state}}, {{user.zip}} | home: {{user.hphone}} | cell: {{user.cphone}} | {{user.email}}
+				{{currentUser.address}}, {{currentUser.city}}, {{currentUser.state}}, {{currentUser.zip}} |  {{currentUser.phone}} | {{currentUser.email}}
 			</div>
 		</header>
-		<section class="education">
+		<section class="education" ng-model="school">
 			<h2>Education</h2>
 			<div class="school entry">
 				<div class="left">
-					<h3>{{school.name}}</h3>
-					<p class="school-facts">{{school.city}}, {{school.state}}, {{school.country}}</p>
+					<h3>{{school.school_name}}</h3>
+					<p class="school-facts">{{school.city}}, {{school.state}}</p>
 				</div>
 				<div class="right">
 					<h4 class="degree-facts">{{school.degree}}</h4>
-					<p class="dates">{{school.start}} - {{school.end}}</p>
+					<p class="dates">{{school.edu_start}} - {{school.edu_end}}</p>
 				</div>
 				<div class="full">
-					<ul>{{school.achievements}}</p>
+					<ul>
+						<li>{{school.achieve_1}}</li>
+						<li>{{school.achieve_2}}</li>
+						<li>{{school.achieve_3}}</li>
+					</ul>
 				</div>
 			</div>
 		</section>
@@ -56,31 +54,26 @@
 			<h2>Employment History</h2>
 			<div class="job entry">
 				<div class="left">
-					<h3>{{job.company.name}}</h3>
+					<h3>{{job.company.comp_name}}</h3>
 					<p class="school-facts">{{job.company.city}}, {{job.company.state}}, {{job.company.country}}</p>
 				</div>
 				<div class="right">
-					<h4 class="degree-facts">{{job.role.title}}</h4>
-					<p class="dates">{{job.role.start}} - {{job.role.end}}</p>
+					<h4 class="degree-facts">{{job.role.role_title}}</h4>
+					<p class="dates">{{job.role.role_start}} - {{job.role.role_end}}</p>
 				</div>
 				<div class="full">
-					<p class="duties">{{job.role.duties}}</p>
-					<ul>{{job.role.achievements}}</p>
+					<p class="duties">{{job.role.role_explain}}</p>
+					<ul>
+						<li>{{job.role.point_1}}</li>
+						<li>{{job.role.point_2}}</li>
+						<li>{{job.role.point_3}}</li>
+					</ul>
 				</div>
 			</div>
 		</section>
-		<section class="skills">
+		<section class="skills" ng-model="skills">
 			<h2>Skills</h2>
-			<ul>{{skills}}</ul>
+			<p>{{skills}}</p>
 		</section>
 	</div>
-</main>
-<footer>
-	<div class="container clearfix">
-		<small class="is-pulled-right">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>; Resumaker made with love by Denise, Matt & Noah; copyright 2017.</small>
-	</div>
-	<script src="http://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="../js/ui.js"></script>
-</footer>
-</body>
-</html>
+</d>
