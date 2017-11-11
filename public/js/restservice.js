@@ -41,18 +41,34 @@ angular.module('resumaker').service('restservice',function($location,$http,$http
 	var getEverything = function(uid, success, fail){
 		$http({
 			method:"GET",
-			url:"http://camp.dovahcorp.com/api.php/users?include=education,skills,cru_link,company,role&filter=id,eq,"+uid
+			url:"http://camp.dovahcorp.com/api.php/users?include=education,skills,cru_link,reference,role,company&filter=id,eq,"+uid
 		}).then(
 		function(response){
 			var details = response.data;
+			var cleanDetails = {};
 			delete details.users;
 			for(var key in details){
 				if(details.hasOwnProperty(key)){
 					delete details[key].relations;
-				}
-			}
-			success(details);
-			console.log("response");
+					var cols = details[key].columns;
+					var rows = details[key].records[0];
+					cleanDetails[key] = {};
+					var group = cleanDetails[key];
+					for(var i=0; i < cols.length; i++ ){
+						if(rows[i]) {
+							var innerkey = cols[i];
+							group[innerkey] =rows[i];
+							console.log(cols[i]+' '+rows[i]);
+						}
+						else{
+							var innerkey = cols[i];
+							group[innerkey] = false;
+						}
+					}//end forloop
+				}//end if own key
+			}//end for key
+
+			success(cleanDetails);
 		},
 		function(err){
 			fail(err);

@@ -68,3 +68,6 @@ footer{padding-top: 1rem;}
 #main-menu-drop,#ed0, #job0, #ref0{
 	display: none;
 }
+#builder.invalid + #print-res{display: none;}
+#builder{display: none;}
+#builder.invalid{display: block;}

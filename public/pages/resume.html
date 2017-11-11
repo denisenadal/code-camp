@@ -1,4 +1,4 @@
-<section id="builder"  class="container content">
+<section id="builder"  class="container content invalid">
 	<h1 class="is-h1 title">Create a Resume</h1>
 	<h2 class="is-h2">Choose A Color</h2>
 	<div id="color-picker" class="level ">
@@ -30,50 +30,50 @@
 				{{currentUser.address}}, {{currentUser.city}}, {{currentUser.state}}, {{currentUser.zip}} |  {{currentUser.phone}} | {{currentUser.email}}
 			</div>
 		</header>
-		<section class="education" ng-model="school">
+		<section class="education" ng-model="userDetails">
 			<h2>Education</h2>
 			<div class="school entry">
 				<div class="left">
-					<h3>{{school.school_name}}</h3>
-					<p class="school-facts">{{school.city}}, {{school.state}}</p>
+					<h3>{{userDetails.education.school_name}}</h3>
+					<p class="school-facts">{{userDetails.education.city}}, {{userDetails.education.state}}</p>
 				</div>
 				<div class="right">
-					<h4 class="degree-facts">{{school.degree}}</h4>
-					<p class="dates">{{school.edu_start}} - {{school.edu_end}}</p>
+					<h4 class="degree-facts">{{userDetails.education.degree}}</h4>
+					<p class="dates">{{userDetails.education.edu_start}} - {{userDetails.education.edu_end}}</p>
 				</div>
 				<div class="full">
 					<ul>
-						<li>{{school.achieve_1}}</li>
-						<li>{{school.achieve_2}}</li>
-						<li>{{school.achieve_3}}</li>
+						<li>{{userDetails.education.achieve_1}}</li>
+						<li>{{userDetails.education.achieve_2}}</li>
+						<li>{{userDetails.education.achieve_3}}</li>
 					</ul>
 				</div>
 			</div>
 		</section>
-		<section class="work">
+		<section class="work" ng-model="userDetails">
 			<h2>Employment History</h2>
 			<div class="job entry">
 				<div class="left">
-					<h3>{{job.company.comp_name}}</h3>
-					<p class="school-facts">{{job.company.city}}, {{job.company.state}}, {{job.company.country}}</p>
+					<h3>{{userDetails.company.comp_name}}</h3>
+					<p class="school-facts">{{userDetails.company.city}}, {{userDetails.company.state}}, {{userDetails.company.country}}</p>
 				</div>
 				<div class="right">
-					<h4 class="degree-facts">{{job.role.role_title}}</h4>
-					<p class="dates">{{job.role.role_start}} - {{job.role.role_end}}</p>
+					<h4 class="degree-facts">{{userDetails.role.role_title}}</h4>
+					<p class="dates">{{userDetails.role.role_start}} - {{userDetails.role.role_end}}</p>
 				</div>
 				<div class="full">
-					<p class="duties">{{job.role.role_explain}}</p>
+					<p class="duties">{{userDetails.role.role_explain}}</p>
 					<ul>
-						<li>{{job.role.point_1}}</li>
-						<li>{{job.role.point_2}}</li>
-						<li>{{job.role.point_3}}</li>
+						<li>{{userDetails.role.point_1}}</li>
+						<li>{{userDetails.role.point_2}}</li>
+						<li>{{userDetails.role.point_3}}</li>
 					</ul>
 				</div>
 			</div>
 		</section>
-		<section class="skills" ng-model="skills">
+		<section class="skills"  ng-model="userDetails">
 			<h2>Skills</h2>
-			<p>{{skills}}</p>
+			<p>{{userDetails.skills}}</p>
 		</section>
 	</div>
 </d>

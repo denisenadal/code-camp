@@ -6,6 +6,17 @@ $(document).ready(function(){
 	$('.add-repeater').click(function(){
 		fieldRepeater(this);
 	});
+	$('#builder .button').click(function(){
+		$('#builder .button').removeClass('is-outlined');
+		$(this).addClass('is-outlined');
+	});
+	$('#builder .res-template').click(function(){
+		$('#builder').removeClass('invalid');
+		var color = $('#builder .button.is-outlined').css('background-color');
+		$('#print-res .stripe::before').css('background-color',color);
+		$('#print-res h2, #print-res h1').css('color',color);
+	});
+
 
 });
 
