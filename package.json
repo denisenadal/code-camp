@@ -1,0 +1,27 @@
+{
+  "name": "code-camp-17",
+  "version": "1.0.0",
+  "description": "a resume builder app by Denise, Matt & Noah",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss public/scss/main.scss   public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denisenadal/code-camp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/denisenadal/code-camp/issues"
+  },
+  "homepage": "https://github.com/denisenadal/code-camp#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "bulma": "^0.6.1",
+    "node-sass": "^4.6.0",
+    "nodemon": "^1.12.1"
+  }
+}
