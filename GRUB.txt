@@ -1,16 +1,16 @@
-Tables
-    company
-    cru_link
-    education
-    reference
-    role
-    skills
-    users
+Tables     &    IDs
+    company     comp_id
+    cru_link    cru_id
+    education   eid
+    reference   rid
+    role        role_id
+    skills      sid
+    users       uid
 
 Paths
-    Listall     GET http://camp.dovahcorp.com/api.php/$Table
+    List all    GET http://camp.dovahcorp.com/api.php/$Table
     Create      POST http://camp.dovahcorp.com/api.php/$Table
-    List-1      GET http://camp.dovahcorp.com/api.php/$Table/$ID
+    List 1      GET http://camp.dovahcorp.com/api.php/$Table/$ID
     Update      PUT http://camp.dovahcorp.com/api.php/$Table/$ID
     Delete      DELETE http://camp.dovahcorp.com/api.php/$Table/$ID
     
