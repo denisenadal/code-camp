@@ -15,6 +15,12 @@ Paths
     Delete      DELETE http://camp.dovahcorp.com/api.php/$Table/$ID
     Relations   GET http://camp.dovahcorp.com/api.php/users?include=education,skills,cru_link,refernce&filter=id,eq,$ID
 
+keys?
+    ?transform=1 - append to the end of url to transform records into objects
+    ?filter=$FIELD,eq,$FIELD-RECORD
+    ?filter=$email,eq,mtyler@dovahcorp.com&transform=1
+
+
 URL
     camp.dovahcorp.com
 
