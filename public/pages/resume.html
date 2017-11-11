@@ -5,21 +5,28 @@
 		<div class="button level-item is-primary is-outlined" value="primary">aqua</div>
 		<div class="button level-item is-link" value="link">cerulean</div>
 		<div class="button level-item is-info" value="info">sky</div>
-		<div class="button level-item is-success" value="lime">lime</div>
+		<div class="button level-item is-success" value="success">lime</div>
 		<div class="button level-item is-warning" value="warning">dandelion</div>
 		<div class="button level-item is-danger" value="danger">tomato</div>
 	</div>
 	<h2 class="is-h2">Choose a template:</h2>
 	<div class="columns is-light padding">
-		<a class="column res-template"><img src="imgs/resume-serif.png" alt="resume preview"></a>
-		<a class="column res-template"><img src="imgs/resume-icons.png" alt="resume preview"></a>
-		<a class="column res-template"><img src="imgs/resume-thin-stripe.png" alt="resume preview"></a>
-		<a class="column res-template"><img src="imgs/resume-thick-stripe.png" alt="resume preview"></a>
+		<a class="column res-template" data-temp="thick">
+			<img src="imgs/resume-serif.png" alt="resume preview">
+		</a>
+		<a class="column res-template"  data-temp="thick">
+			<img src="imgs/resume-icons.png" alt="resume preview">
+		</a>
+		<a class="column res-template" data-temp="thin">
+			<img src="imgs/resume-thin-stripe.png" alt="resume preview">
+		</a>
+		<a class="column res-template" data-temp="thick">
+			<img src="imgs/resume-thick-stripe.png" alt="resume preview">
+		</a>
 
 	</div>
 </section>
 <section id="print-res" class="container content">
-	<link rel="stylesheet" href="css/resume-thick-stripe.css">
 	<div class="stripe"  ng-model="currentUser">
 		<div class="initials"><p>{{currentUser.u_fname[0]+currentUser.u_lname[0]}}<p></div>
 	</div>
