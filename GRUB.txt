@@ -13,8 +13,62 @@ Paths
     List 1      GET http://camp.dovahcorp.com/api.php/$Table/$ID
     Update      PUT http://camp.dovahcorp.com/api.php/$Table/$ID
     Delete      DELETE http://camp.dovahcorp.com/api.php/$Table/$ID
-    
-    Relations   (in progress)
+    Relations   GET http://camp.dovahcorp.com/api.php/users?include=education,skills,cru_link,refernce&filter=id,eq,$ID
 
 URL
     camp.dovahcorp.com
+
+TEST INPUTS
+    Education
+        eid:e1
+        school_type:univercity
+        school_name:Dixie State University
+        degree:Bachelors of Sci in IT
+        city:St. george
+        state:UT
+        edu_start:8/21/15
+        edu_end:5/12/19
+        is_completed:false
+        achieve_1:look good
+        achieve_2:i mean really good
+        achieve_3:come and see how good i look
+        uid:u1
+
+    skills
+        sid:s1
+        skills:i have so many skills, like the best skills! sosososososososo good skills.
+        uid:u1
+
+    company
+        comp_id:c2
+        comp_name:Dovacorp inc.
+        city:Philadelphia
+        state:pa
+
+    role
+        role_id:r1
+        role_title:lead leader guy
+        role_start:2002/02/20
+        role_end:2010/01/02
+        is_current:false
+        role_explain:i leaded people and stuff
+        point_1:leader
+        point_2:lead pipe
+        point_3: pipe pie town
+
+    cru_link
+        cru_id:z1
+        comp_id:c2
+        role_id:r1
+        uid:u1
+
+    reference
+        rid:r1
+        r_fname:reggie
+        r_lname:reich
+        company:that one place
+        title: my boss man
+        phone:8134901309
+        email:boss@guy.email
+        uid:u1
+
