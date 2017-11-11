@@ -17,6 +17,14 @@ $section-padding: 3rem 0;
 
 // 6. Import the rest of Bulma
 @import "node_modules/bulma/bulma";
+
+div.is-primary{background:$primary};
+div.is-link{background:$link;}
+div.is-info{background:$info;}
+div.is-success{background:$success;}
+div.is-warning{background:$warning;}
+div.is-danger{background:$danger;}
+
 .padding{padding:2rem;}
 
 .clearfix::after{

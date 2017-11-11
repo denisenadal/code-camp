@@ -20,17 +20,11 @@
 	position: relative;
 	color:#fff;
 	padding: 1rem;
+	font-size: 2.5rem;
 }
-#print-res .stripe::before{
-	content: '';
-	background:red;
-	position: absolute;
-	left:0;
-	right: 0;
-	width:100%;
-	top:0;
-	bottom:0;
-	z-index: -1;
+#print-res .stripe p{
+	position: relative;
+	z-index: 10;
 }
 #print-res .stripe::after{
 	content: '';
@@ -41,7 +35,6 @@
 	width:50%;
 	top:0;
 	bottom:0;
-	z-index: -1;
 }
 #print-res .main{
 	padding: 2rem;
@@ -54,9 +47,7 @@
 	margin-top: 2rem;
 	width: 100%;
 	display: block;
-	color:red;
 }
-#print-res h1{color:red;}
 #print-res h4, #print-res h3{
 	margin-bottom: 0;
 }

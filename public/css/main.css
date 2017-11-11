@@ -6473,6 +6473,24 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
+div.is-primary {
+  background: #00d1b2; }
+
+div.is-link {
+  background: #3273dc; }
+
+div.is-info {
+  background: #209cee; }
+
+div.is-success {
+  background: #23d160; }
+
+div.is-warning {
+  background: #ffdd57; }
+
+div.is-danger {
+  background: #ff3860; }
+
 .padding {
   padding: 2rem; }
 

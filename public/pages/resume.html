@@ -2,12 +2,12 @@
 	<h1 class="is-h1 title">Create a Resume</h1>
 	<h2 class="is-h2">Choose A Color</h2>
 	<div id="color-picker" class="level ">
-		<div class="button level-item is-primary">aqua</div>
-		<div class="button level-item is-link">cerulean</div>
-		<div class="button level-item is-info">sky</div>
-		<div class="button level-item is-success">lime</div>
-		<div class="button level-item is-warning">dandelion</div>
-		<div class="button level-item is-danger">tomato</div>
+		<div class="button level-item is-primary is-outlined" value="primary">aqua</div>
+		<div class="button level-item is-link" value="link">cerulean</div>
+		<div class="button level-item is-info" value="info">sky</div>
+		<div class="button level-item is-success" value="lime">lime</div>
+		<div class="button level-item is-warning" value="warning">dandelion</div>
+		<div class="button level-item is-danger" value="danger">tomato</div>
 	</div>
 	<h2 class="is-h2">Choose a template:</h2>
 	<div class="columns is-light padding">
@@ -21,7 +21,7 @@
 <section id="print-res" class="container content">
 	<link rel="stylesheet" href="css/resume-thick-stripe.css">
 	<div class="stripe"  ng-model="currentUser">
-		<div class="initials">{{currentUser.u_fname[0]+currentUser.u_lname[0]}}</div>
+		<div class="initials"><p>{{currentUser.u_fname[0]+currentUser.u_lname[0]}}<p></div>
 	</div>
 	<div class="main">
 		<header ng-model="currentUser">
@@ -39,7 +39,7 @@
 				</div>
 				<div class="right">
 					<h4 class="degree-facts">{{userDetails.education.degree}}</h4>
-					<p class="dates">{{userDetails.education.edu_start}} - {{userDetails.education.edu_end}}</p>
+					<p class="dates">{{userDetails.education.edu_start | date: 'MMMM, yyyy'}} - {{userDetails.education.edu_end}}</p>
 				</div>
 				<div class="full">
 					<ul>
@@ -73,7 +73,7 @@
 		</section>
 		<section class="skills"  ng-model="userDetails">
 			<h2>Skills</h2>
-			<p>{{userDetails.skills}}</p>
+			<p>{{userDetails.skills.skills}}</p>
 		</section>
 	</div>
 </d>
