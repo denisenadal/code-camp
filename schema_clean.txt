@@ -1,0 +1,93 @@
+Resume
+
+users
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| uid     | char(3)     | NO   | PRI | NULL    |       |
+| u_fname | varchar(15) | NO   |     | NULL    |       |
+| u_lname | varchar(15) | NO   |     | NULL    |       |
+| phone   | varchar(12) | YES  |     | NULL    |       |
+| address | varchar(30) | YES  |     | NULL    |       |
+| city    | varchar(15) | YES  |     | NULL    |       |
+| state   | char(2)     | YES  |     | NULL    |       |
+| zip     | char(5)     | YES  |     | NULL    |       |
+| email   | varchar(30) | YES  |     | NULL    |       |
++---------+-------------+------+-----+---------+-------+
+
+skills
++--------+--------------+------+-----+---------+-------+
+| Field  | Type         | Null | Key | Default | Extra |
++--------+--------------+------+-----+---------+-------+
+| sid    | char(3)      | NO   | PRI | NULL    |       |
+| skills | varchar(400) | YES  |     | NULL    |       |
+| uid    | char(3)      | YES  | MUL | NULL    |       |
++--------+--------------+------+-----+---------+-------+
+
+education
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| eid          | char(3)     | NO   | PRI | NULL    |       |
+| school_type  | varchar(20) | NO   |     | NULL    |       |
+| school_name  | varchar(30) | NO   |     | NULL    |       |
+| degree       | varchar(30) | YES  |     | NULL    |       |
+| city         | varchar(15) | YES  |     | NULL    |       |
+| state        | char(2)     | YES  |     | NULL    |       |
+| edu_start    | date        | YES  |     | NULL    |       |
+| edu_end      | date        | YES  |     | NULL    |       |
+| is_completed | tinyint(1)  | YES  |     | NULL    |       |
+| achieve_1    | varchar(40) | YES  |     | NULL    |       |
+| achieve_2    | varchar(40) | YES  |     | NULL    |       |
+| achieve_3    | varchar(40) | YES  |     | NULL    |       |
+| uid          | char(3)     | NO   | MUL | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+cru_link
++---------+---------+------+-----+---------+-------+
+| Field   | Type    | Null | Key | Default | Extra |
++---------+---------+------+-----+---------+-------+
+| cru_id  | char(3) | NO   | PRI | NULL    |       |
+| comp_id | char(3) | NO   | MUL | NULL    |       |
+| role_id | char(3) | NO   | MUL | NULL    |       |
+| uid     | char(3) | NO   | MUL | NULL    |       |
++---------+---------+------+-----+---------+-------+
+
+company
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| comp_id   | char(3)     | NO   | PRI | NULL    |       |
+| comp_name | varchar(40) | YES  |     | NULL    |       |
+| city      | varchar(15) | YES  |     | NULL    |       |
+| state     | char(2)     | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+
+role
++--------------+--------------+------+-----+---------+-------+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| role_id      | char(3)      | NO   | PRI | NULL    |       |
+| role_title   | varchar(30)  | YES  |     | NULL    |       |
+| role_start   | date         | YES  |     | NULL    |       |
+| role_end     | date         | YES  |     | NULL    |       |
+| is_current   | tinyint(1)   | YES  |     | NULL    |       |
+| role_explain | varchar(400) | YES  |     | NULL    |       |
+| point_1      | varchar(40)  | YES  |     | NULL    |       |
+| point_2      | varchar(40)  | YES  |     | NULL    |       |
+| point_3      | varchar(40)  | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+reference
++---------+-------------+------+-----+---------+-------+
+| Field   | Type        | Null | Key | Default | Extra |
++---------+-------------+------+-----+---------+-------+
+| rid     | char(3)     | NO   | PRI | NULL    |       |
+| r_fname | varchar(15) | NO   |     | NULL    |       |
+| r_lname | varchar(15) | NO   |     | NULL    |       |
+| company | varchar(40) | YES  |     | NULL    |       |
+| title   | varchar(30) | YES  |     | NULL    |       |
+| phone   | varchar(12) | YES  |     | NULL    |       |
+| email   | varchar(30) | YES  |     | NULL    |       |
+| uid     | char(3)     | NO   | MUL | NULL    |       |
++---------+-------------+------+-----+---------+-------+
