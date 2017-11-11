@@ -6473,6 +6473,18 @@ label.panel-block {
   background-color: whitesmoke;
   padding: 3rem 1.5rem 6rem; }
 
+.padding {
+  padding: 2rem; }
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+  height: 0; }
+
+div.is-light {
+  background: whitesmoke; }
+
 section.hero {
   background-image: url("../imgs/doc-tilt.svg"), linear-gradient(135deg, #05abe0 0%, #76f2be 100%);
   background-repeat: no-repeat, no-repeat;
@@ -6492,6 +6504,22 @@ section.hero {
 
 .ref-set {
   padding-bottom: 2rem; }
+
+img.user-avatar {
+  padding: 2rem 20%; }
+
+#dash-wrap {
+  min-height: calc(100vh - 2rem); }
+
+#current-resumes {
+  min-height: 200px;
+  background: whitesmoke; }
+
+#color-picker .level-item {
+  margin: 0 .5rem; }
+
+footer {
+  padding-top: 1rem; }
 
 #main-menu-drop, #ed0, #job0, #ref0 {
   display: none; }
